@@ -279,6 +279,13 @@ nav {
 .project-tags {
   margin-top: 0.75rem;
 }
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: end;
+}
 
 /* ─── Experience ─────────────────────────────────── */
 .exp-item {
