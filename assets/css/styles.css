@@ -1,0 +1,346 @@
+/* ─── CSS Variables ─────────────────────────────── */
+:root {
+  --bg: #fffbeb;
+  --bg-card: #fef3c7;
+  --border: #d5ab00;
+  --text: #451a03;
+  --muted: #92400e;
+  --accent: #d97706;
+  --accent-h: #b45309;
+}
+
+/* ─── Reset ─────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-h);
+}
+
+/* ─── Reusable Utility Classes ───────────────────── */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+}
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.4rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: transparent;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-fill {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-fill:hover {
+  background: var(--accent-h);
+  border-color: var(--accent-h);
+  color: var(--bg);
+}
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  margin: 0.2rem 0.15rem 0.2rem 0;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-muted {
+  color: var(--muted);
+}
+.mt-sm {
+  margin-top: 0.5rem;
+}
+.mt-md {
+  margin-top: 1rem;
+}
+.mt-lg {
+  margin-top: 2rem;
+}
+
+/* ─── Navbar ─────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+.nav-logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu.open {
+  display: flex;
+}
+.mobile-menu a {
+  display: block;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:hover {
+  color: var(--accent);
+}
+
+/* ─── Hero ───────────────────────────────────────── */
+#hero {
+  padding: 6rem 0 5rem;
+}
+
+#hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+#hero h1 em {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 600;
+}
+#hero p {
+  max-width: 480px;
+  color: var(--muted);
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+}
+.hero-btns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ─── Skills ─────────────────────────────────────── */
+.skill-group {
+  margin-bottom: 2.5rem;
+}
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+.skill-group-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+.skill-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+/* ─── Projects ───────────────────────────────────── */
+.project-card {
+  margin-bottom: 1.25rem;
+}
+.project-card:last-child {
+  margin-bottom: 0;
+}
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.project-card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.project-tags {
+  margin-top: 0.75rem;
+}
+
+/* ─── Experience ─────────────────────────────────── */
+.exp-item {
+  padding: 1.5rem;
+}
+.exp-item + .exp-item {
+  border-top: 1px solid var(--border);
+}
+.exp-company {
+  font-weight: 600;
+}
+.exp-role {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.exp-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.exp-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+/* ─── Contact ────────────────────────────────────── */
+#contact {
+  text-align: center;
+}
+#contact h2 {
+  font-size: 1.75rem;
+}
+#contact p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Footer ─────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ─── Responsive ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

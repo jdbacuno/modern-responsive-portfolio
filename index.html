@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonas Bacuño — Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- ── NAV ────────────────────────────────────────────── -->
+    <nav>
+      <div class="nav-inner">
+        <span class="nav-logo">Jonas B.</span>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobile()">About</a>
+        <a href="#skills" onclick="closeMobile()">Skills</a>
+        <a href="#projects" onclick="closeMobile()">Projects</a>
+        <a href="#experience" onclick="closeMobile()">Experience</a>
+        <a href="#contact" onclick="closeMobile()">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="container">
+        <h1>Jonas <em>Bacuño.</em></h1>
+        <p>
+          Computer science student & developer building thoughtful web
+          applications with clean code and modern tooling.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-fill">View Projects</a>
+          <a
+            href="https://drive.google.com/file/d/1N3s2CYXNtm3Vi0uLCF5NVSTDcenTC2JN/view?usp=drive_link"
+            download="Jonas_Bacuno_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────── -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="label">About</p>
+        <p>
+          I'm a BS Computer Science student at City College of Angeles with a
+          focus on full-stack web development. I enjoy turning ideas into clean,
+          functional products — from database schemas to polished UIs.
+        </p>
+
+        <div style="margin-top: 1.5rem">
+          <span class="tag">Laravel</span>
+          <span class="tag">ReactJS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────── -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="label">Skills</p>
+
+        <div class="skill-group">
+          <p class="skill-group-title">Languages</p>
+          <div class="skill-cards">
+            <span class="skill-card">HTML</span>
+            <span class="skill-card">CSS</span>
+            <span class="skill-card">JavaScript</span>
+            <span class="skill-card">PHP</span>
+            <span class="skill-card">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <p class="skill-group-title">Frameworks & Libraries</p>
+          <div class="skill-cards">
+            <span class="skill-card">Laravel</span>
+            <span class="skill-card">ReactJS</span>
+            <span class="skill-card">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <p class="skill-group-title">Other Tools</p>
+          <div class="skill-cards">
+            <span class="skill-card">Git</span>
+            <span class="skill-card">VSCode</span>
+            <span class="skill-card">Figma</span>
+            <span class="skill-card">Canva</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────────── -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="label">Projects</p>
+        <div class="card project-card">
+          <h3>Web-based Pet Adoption Platform</h3>
+          <p>
+            A full-stack platform for the Angeles City Veterinary Office to
+            manage and facilitate adoption of rescued cats and dogs. Includes an
+            admin dashboard with data analytics and a client-facing interface.
+          </p>
+          <p class="mt-sm text-sm text-muted">
+            Integrated a Python ML algorithm using statistical tools for data
+            analysis and matching.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+    <section id="experience" class="section">
+      <div class="container">
+        <p class="label">Experience & Education</p>
+        <div class="card" style="padding: 0; overflow: hidden">
+          <div class="exp-item">
+            <div class="exp-company">
+              BB 88 Advertising and Digital Solutions Inc.
+            </div>
+            <div class="exp-role">Developer Intern</div>
+            <div class="exp-date">In Progress</div>
+            <div class="exp-desc">
+              Building and maintaining web applications in a real-world
+              production environment as a developer intern.
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-company">City College of Angeles</div>
+            <div class="exp-role">BS Computer Science</div>
+            <div class="exp-date">2022 - Present</div>
+            <div class="exp-desc">
+              Coursework includes Web Programming, Object-Oriented Programming,
+              Database Management, and Human-Computer Interaction.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────── -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="label" style="text-align: center">Contact</p>
+        <h2>Let's work together.</h2>
+        <p>
+          Open to freelance projects, collaborations, or just a good
+          conversation about tech.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:jonas.d.bacuno@gmail.com" class="btn btn-fill"
+            >Send Email</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jonas-bacuno/"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+            >LinkedIn ↗</a
+          >
+          <a
+            href="https://github.com/jdbacuno"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+            >GitHub ↗</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer>
+      <div class="container">
+        <p>© 2025 Jonas Dela Cruz Bacuño</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
